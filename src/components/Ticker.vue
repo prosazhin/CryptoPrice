@@ -7,7 +7,17 @@
     <div class="min-w-0 flex-1 flex flex-col">
       <div class="flex items-center">
         <span class="text-sm font-normal text-black flex-1">{{ name }}</span>
-        <TrashIcon class="h-5 w-5 text-gray-400 hover:text-red-600" aria-hidden="true" @click="removeTicker(name)" />
+        <TrashIcon
+          class="h-5 w-5 text-gray-400 hover:text-red-600"
+          aria-hidden="true"
+          @click="
+            (event) => {
+              event.stopPropagation();
+              event.preventDefault();
+              removeTicker(name);
+            }
+          "
+        />
       </div>
       <span class="text-4xl font-normal text-black">{{ value }}$</span>
     </div>
