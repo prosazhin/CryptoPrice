@@ -1,7 +1,7 @@
 <template>
   <div
     class="relative flex items-center space-x-3 rounded-lg border border-gray-300 bg-white px-5 py-4 focus-within:ring-2 hover:border-gray-400 cursor-pointer"
-    :class="{ 'border-[3px] !border-gray-900': name === selectedTicker }"
+    :class="{ 'ring-[3px] ring-gray-900 !border-gray-900': name === selectedTicker }"
     @click="selectTicker(name)"
   >
     <div class="min-w-0 flex-1 flex flex-col">
